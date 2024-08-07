@@ -180,10 +180,14 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/api/registerRoutes/register', formData);
-      alert(response.data.message);
+      const response = await axios.post('http://localhost:3001/api/registerRoutes/register', { ...formData });
+      console.log('User added:', response.data);
+      alert('User added successfully');
+      
     } catch (error) {
-      alert('Registration failed: ' + error.response.data.error);
+      
+      console.error('Error adding user:', error);
+      alert('Error adding user');
     }
   };
 
