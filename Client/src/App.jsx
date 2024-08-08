@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 
 import Login from './Pages/Userauthentication/login'
 import Register from './Pages/Userauthentication/register'
-import Dashboardpage from './Pages/dashboardpage';
+import Dashboardpage from './Pages/Csv_uploadpage';
 import DashNavbar from './components/dashboard_nav';
 
 
@@ -24,7 +24,7 @@ const DashLayout = () => {
           <DashNavbar />
         </div>
 
-        <div className="w-calc">
+        <div className="w-full">
           <Outlet />
         </div>
       </div>
